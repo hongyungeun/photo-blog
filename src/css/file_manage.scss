@@ -1,0 +1,29 @@
+.file_manage_wrap {
+  background: #000;
+  min-height: calc(100vh - 98px);
+  display: flex;
+  gap: 10px;
+  .file_manage_main_wrap {
+    background: white;
+    width: 92%;
+    border-radius: 15px 0 0 0;
+    padding: 20px 50px;
+    box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.534);
+    .file_manage_title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0 20px 0;
+    }
+    .file_manage_find_wrap {
+      display: flex;
+      .file_manage_select {
+        border: 1px solid #ddd;
+      }
+      .file_manage_find_btn {
+        padding: 10px 15px;
+      }
+    }
+   
+  }
+}
