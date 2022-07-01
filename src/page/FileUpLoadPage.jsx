@@ -7,6 +7,7 @@ import {useLocation} from 'react-router-dom'
 import cloudImg from '../img/upload_cloud.svg'
 import { useDispatch, useSelector } from 'react-redux';
 import { fileInputChangeField } from '../modules/fileUpReducer';
+
 function FileUpload(){
   const [imgBase64, setImgBase64] = useState([]);
   const [imgFile, setImgFile] = useState(null);
@@ -34,11 +35,11 @@ function FileUpload(){
     const {name,value} = e.target
     dispatch(fileInputChangeField({
       key:name,
-      value :[]
+      value
     }))
   }
 
-
+ 
   return(
     <div>
       <Header2></Header2>
@@ -49,7 +50,7 @@ function FileUpload(){
           <div className='file_up_main_wrap'>
             <div className='file_up_box_section'>
               <div className="file_up_box">
-                <label {...getRootProps()} className='input_file_label'>
+                <label className='input_file_label' >
                   {imgBase64.length===0 ? <div><img src={cloudImg} /></div>: imgBase64.map((file) => (
                   <p className='file_upload_p'>{file.name}</p>
                 ))}
